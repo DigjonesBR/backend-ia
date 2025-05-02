@@ -2,8 +2,9 @@
 const express = require("express");
 const router = express.Router();
 
-router.get("/teste", (req, res) => {
-  res.send("Backend IA funcionando com sucesso!");
+router.post("/", (req, res) => {
+  const { mensagem } = req.body;
+  res.json({ resposta: IA simulada: ${mensagem.toUpperCase()} });
 });
 
 module.exports = router;
